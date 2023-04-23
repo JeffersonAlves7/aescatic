@@ -1,7 +1,10 @@
+import logo from "../../assets/logo.png"
+
 export function Navbar(){
     return (
-        <div>
-            <p>oi</p>
+        <div className="navbar">
+            <img src={logo} alt="" />
+            <input type="text" />
         </div>
     )
 }
