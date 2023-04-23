@@ -1,0 +1,23 @@
+.busca input, .busca button{
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+.busca button{
+    cursor: pointer;
+}
+
+.busca input{
+    width: 100%;
+}
+
+.busca{
+    border-radius: 1rem;
+    background-color: white;
+    padding: .4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+

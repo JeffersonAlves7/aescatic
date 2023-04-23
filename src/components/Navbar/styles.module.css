@@ -1,14 +1,24 @@
-.navbar{
+.navbar {
+    width: 100%;
+    background-color: #cdb4db;
+}
+
+.navbar ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    background-color: #cdb4db;
-    
+}
+
+.navbar li{ 
+    list-style: none;
 }
 
 .logoImage{
     height: 3.8rem;
+}
+
+.busca{
+    width: 60%;
 }
 
 .icons{
@@ -17,35 +27,6 @@
     font-size: 1.4rem;
     color: #3c096c;
 }
-
-.buscar input, .buscar button{
-    outline: none;
-    border: none;
-    background-color: white;
-}
-
-.buscar button{
-    cursor: pointer;
-
-}
-
-.buscar input{
-    width: 100%;
-
-
-}
-
-.buscar{
-    border-radius: 1rem;
-    background-color: white;
-    padding: .4rem;
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-
-
-}
-
 
 .icons i:hover{
     opacity: 0.4;

@@ -1,13 +1,13 @@
-import { Destaques } from './components/Destaques'
-import {Navbar} from './components/Navbar'
+import { Destaques } from "./components/Destaques";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Destaques/>
+      <Navbar />
+      <Destaques />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
