@@ -5,6 +5,7 @@ export function Navbar(){
         <div className="navbar">
             <img src={logo} alt="" />
             <input type="text" />
+            <i class="bi bi-suit-heart-fill"></i>
         </div>
     )
 }
