@@ -1,12 +1,29 @@
 .navbar {
     width: 100%;
     background-color: #cdb4db;
+    overflow-x: hidden;
 }
 
 .navbar ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.navbar ul:first-child{
+    position: relative;
+    padding: .8rem 0;
+}
+
+.navbar ul:first-child::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 120vw;
+    left: -10%;
+    bottom: 0px;
+    border-bottom: 1px solid white;
 }
 
 .navbar li{ 
