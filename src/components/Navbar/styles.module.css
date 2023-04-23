@@ -20,8 +20,8 @@
     content: '';
     display: block;
     position: absolute;
-    width: 120vw;
-    left: -10%;
+    width: 200vw;
+    left: -50vw;
     bottom: 0px;
     border-bottom: 1px solid white;
 }

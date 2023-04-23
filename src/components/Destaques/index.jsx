@@ -1,4 +1,5 @@
 import { Carousel } from "react-bootstrap";
+import { carousel } from "./styles.module.css";
 
 function getDestaques() {
   return [
@@ -11,18 +12,18 @@ function getDestaques() {
 export const Destaques = () => {
   const destaques = getDestaques();
   return (
-    <Carousel>
-      {destaques.map((destaque) => {
-        return (
-          <Carousel.Item>
-            <div className="d-flex align-items-center justify-content-center">
-              <h2>
-                {destaque}
-              </h2>
-            </div>
-          </Carousel.Item>
-        );
-      })}
-    </Carousel>
+    <div className="container">
+      <Carousel className={carousel}>
+        {destaques.map((destaque) => {
+          return (
+            <Carousel.Item>
+              <div className="d-flex align-items-center justify-content-center h-100">
+                <h2>{destaque}</h2>
+              </div>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
+    </div>
   );
 };
