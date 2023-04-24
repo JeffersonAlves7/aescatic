@@ -1,0 +1,22 @@
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 1rem;
+    align-items: center;
+    color: #3c096c;
+
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.bi{
+    font-size: 1.6rem;
+}
+
+.p{
+    font-size: 1.1rem;
+}
