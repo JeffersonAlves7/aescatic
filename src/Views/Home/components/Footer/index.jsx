@@ -1,4 +1,4 @@
-import { wpp, email, footer, instagram } from "./styles.module.css";
+import { wpp, email, footer, instagram } from './styles.module.css';
 
 export function Footer() {
   return (
@@ -7,7 +7,7 @@ export function Footer() {
         <h4>Contato</h4>
         <div className="d-flex align-items-center gap-5">
           <div className="whatsapp">
-            <span>Whatsapp</span>
+            <p>Whatsapp</p>
             <a
               className="d-flex align-items-center gap-2"
               href="https://wa.me/5521982993019"
@@ -19,7 +19,7 @@ export function Footer() {
             </a>
           </div>
           <div className="email">
-            <span>Email</span>
+            <p>Email</p>
             <a
               className="d-flex align-items-center gap-2"
               href="mailto:andressaricardo30@gmail.com"
@@ -35,11 +35,12 @@ export function Footer() {
       <div className="redes">
         <h4>Redes sociais</h4>
         <div className="instagram">
-          <a className="d-flex align-items-center gap-2" href="">
+          <p>Instagram</p>
+          <a className="d-flex align-items-center gap-2" href="#">
             <div className={instagram}>
               <i class="bi bi-instagram"></i>
             </div>
-            <span>Instagram</span>
+            <span>@Aescatic</span>
           </a>
         </div>
       </div>
