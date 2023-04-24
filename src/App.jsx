@@ -1,12 +1,14 @@
-import { Destaques } from "./components/Destaques";
-import { Navbar } from "./components/Navbar";
-import { Sobre } from "./components/Sobre";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./Views/Home";
+
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Destaques />
-      <Sobre />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
