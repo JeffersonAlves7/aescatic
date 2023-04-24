@@ -1,4 +1,4 @@
-import logo from "../../../../assets/logo.png";
+import logo from "@/assets/logo.png";
 import Busca from "../Busca";
 import { navbar, icons, logoImage, busca } from "./styles.module.css";
 
