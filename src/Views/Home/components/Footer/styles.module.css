@@ -1,0 +1,26 @@
+.wpp{
+    color: green;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+    gap: .4rem;
+}
+
+.email{
+    color: rgb(144, 134, 153);
+    font-size: 1.2rem;
+}
+
+.foter{
+    background-color: #cdb4db;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.instagram{
+    color: #d233d7, 
+}
