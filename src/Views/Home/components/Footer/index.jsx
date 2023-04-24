@@ -5,7 +5,7 @@ export function Footer() {
     <footer className={footer}>
       <div className="Contatos">
         <h4>Contato</h4>
-        <div className="d-flex align-items-center gap-5">
+        <div>
           <div className="whatsapp">
             <p>Whatsapp</p>
             <a

@@ -13,7 +13,6 @@
     background-color: #cdb4db;
     width: 100%;
     display: flex;
-    flex-direction: column;
     gap: .8rem;
     padding: 10px 0;
 }
