@@ -5,7 +5,7 @@ export function Sobre() {
     <div className={flex}>
       <div>
         <div className={bi}>
-          <i class="bi bi-credit-card-fill"></i>
+          <i className="bi bi-credit-card-fill"></i>
         </div>
         <p className={p}>
           Parcele suas compras <br></br>em até 12x
@@ -21,7 +21,7 @@ export function Sobre() {
       </div>
       <div>
         <div className={bi}>
-          <i class="bi bi-box-seam"></i>
+          <i className="bi bi-box-seam"></i>
         </div>
         <p className={p}>
           Troca e devolução em <br></br>até 7 dias
@@ -29,7 +29,7 @@ export function Sobre() {
       </div>
       <div>
         <div className={bi}>
-          <i class="bi bi-percent"></i>
+          <i className="bi bi-percent"></i>
         </div>
         <p className={p}>
           Pague no pix e ganhe <br></br>desconto
