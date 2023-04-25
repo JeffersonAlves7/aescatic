@@ -1,7 +1,7 @@
 import logo from '@/assets/logo.png';
 import Busca from '../Busca';
 import { navbar, icons, logoImage, busca } from './styles.module.css';
-
+import { Link } from 'react-router-dom';
 function getCategorias() {
   return ['acessórios', 'sapatos', 'canecas', 'bolsas/mochilas', 'contato'];
 }
@@ -13,9 +13,9 @@ export function Navbar() {
       <div className="container">
         <ul>
           <li>
-            <a href="">
+            <Link to={'/'}>
               <img src={logo} alt="logo-image" className={logoImage} />{' '}
-            </a>
+            </Link>
           </li>
           <li className={busca}>
             <Busca />
