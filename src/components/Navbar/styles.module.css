@@ -2,6 +2,8 @@
     width: 100%;
     background-color: #cdb4db;
     overflow-x: hidden;
+    position: fixed;
+    top: 0
 }
 
 .navbar ul{

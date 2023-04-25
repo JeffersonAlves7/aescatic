@@ -14,6 +14,10 @@ a{
     color: black;
 }
 
+.App {
+    padding-top: 9.2rem
+}
+
 @media (min-width: 768px) {
 
 }
