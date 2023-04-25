@@ -13,7 +13,7 @@ export function Footer() {
               href="https://wa.me/5521982993019"
             >
               <div className={wpp}>
-                <i class="bi bi-whatsapp"></i>
+                <i className="bi bi-whatsapp"></i>
               </div>
               (21)96590-3512
             </a>
@@ -25,7 +25,7 @@ export function Footer() {
               href="mailto:andressaricardo30@gmail.com"
             >
               <div className={email}>
-                <i class="bi bi-envelope-at-fill"></i>
+                <i className="bi bi-envelope-at-fill"></i>
               </div>
               andressaricardo30@gmail.com
             </a>
@@ -38,7 +38,7 @@ export function Footer() {
           <p>Instagram</p>
           <a className="d-flex align-items-center gap-2" href="#">
             <div className={instagram}>
-              <i class="bi bi-instagram"></i>
+              <i className="bi bi-instagram"></i>
             </div>
             <span>@Aescatic</span>
           </a>
