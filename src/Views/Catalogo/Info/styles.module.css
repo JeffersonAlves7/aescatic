@@ -1,0 +1,44 @@
+.viewImg{
+    background-color:blueviolet;
+    height: 4rem;
+    width: 4rem;
+    border-radius: .6rem;
+}
+
+.imgsR{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.centralImg{
+    background-color: blueviolet;
+    height: 22rem;
+    width: 22rem;
+    border-radius: .6rem;
+
+}
+
+.flex{
+    display: flex;
+    gap: .5rem;
+    
+}
+
+.btnTamanho{
+    display: flex;
+    gap: .5rem;
+}
+
+.infos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+h1{
+    text-align: center;
+}
+
