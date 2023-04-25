@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import {
-  viewImg,
   imgsR,
   centralImg,
   flex,
@@ -8,14 +7,25 @@ import {
   infos,
 } from './styles.module.css';
 
-function getInfo() {
-  return {};
+function getInfo(categoria, peca) {
+  console.log({ categoria, peca });
+
+  const product = {
+    name: peca,
+    img: '',
+    price: 30,
+    sizes: ['PP', 'P', 'M', 'G', 'GG'],
+    colors: ['blue', 'red'],
+  };
+
+  product.price = `R$ ${product.price}`;
+  return product;
 }
 
 export function Info() {
   const { categoria, peca } = useParams();
 
-  const info = getInfo(); // Essa variavel vai ter todas as informacoes sobre o produto
+  const info = getInfo(categoria, peca); // Essa variavel vai ter todas as informacoes sobre o produto
 
   return (
     <div>
@@ -23,27 +33,29 @@ export function Info() {
       <div className={infos}>
         <div className={flex}>
           <div className={imgsR}>
-            <div className={viewImg}></div>
-            <div className={viewImg}></div>
-            <div className={viewImg}></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
           <img className={centralImg} src="" alt="" />
         </div>
         <div>
           <div>
-            <p>R$ 30,00</p>
+            <p>{info.price}</p>
             <span>3x de 10 sem juros</span>
             <p>Tamanho:</p>
             <div className={btnTamanho}>
-              <button>PP</button>
-              <button>P</button>
-              <button>M</button>
-              <button>G</button>
-              <button>GG</button>
+              {info.sizes.map((size) => {
+                return <button key={'size'}>{size}</button>;
+              })}
             </div>
             <p>Cor:</p>
             <select name="" id="">
-              <option value="">azul</option>
+              {info.colors.map((color) => (
+                <option key={color} value={color}>
+                  {color}
+                </option>
+              ))}
             </select>
             <p>Quantidade:</p>
             <div className={flex}>
