@@ -21,11 +21,12 @@
     font-weight: bold;
 }
 
-div.ProdutoImage{
+.ProdutoImage{
     background-color: pink;
     height: 100%;
     width: 100%;
     border-radius: .4rem;
+    display: block;
 }
 
 .ProdutoPrice { 

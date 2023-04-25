@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import {
   Produto,
   Produtos,
@@ -54,9 +54,9 @@ export function Categoria() {
         <div className={Produtos}>
           {produtos.map((p, i) => (
             <div key={`${p}-${i}`} className={Produto}>
-              <div className={ProdutoImage}>
+              <Link to={`./${p.name}`} className={ProdutoImage}>
                 <img src={p.img} alt="" />
-              </div>
+              </Link>
               <p className={ProdutoName}>{p.name}</p>
               <p className={ProdutoPrice}>{p.price}</p>
             </div>
