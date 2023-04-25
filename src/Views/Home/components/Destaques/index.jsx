@@ -1,11 +1,11 @@
-import { Carousel } from "react-bootstrap";
-import { carousel } from "./styles.module.css";
+import { Carousel } from 'react-bootstrap';
+import { carousel } from './styles.module.css';
 
 function getDestaques() {
   return [
-    "3 BLUSAS POR 15 REAIS",
-    "3 BLUSAS POR 15 REAIS",
-    "3 BLUSAS POR 15 REAIS",
+    '3 BLUSAS POR 15 REAIS',
+    '3 BLUSAS POR 15 REAIS',
+    '3 BLUSAS POR 15 REAIS',
   ];
 }
 
@@ -14,9 +14,9 @@ export const Destaques = () => {
   return (
     <div className="container">
       <Carousel className={carousel}>
-        {destaques.map((destaque) => {
+        {destaques.map((destaque, index) => {
           return (
-            <Carousel.Item>
+            <Carousel.Item key={`${destaque}-${index}`}>
               <div className="d-flex align-items-center justify-content-center h-100">
                 <h2>{destaque}</h2>
               </div>

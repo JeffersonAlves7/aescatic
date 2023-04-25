@@ -1,4 +1,4 @@
-import { busca } from "./styles.module.css";
+import { busca } from './styles.module.css';
 
 export default function Busca() {
   return (

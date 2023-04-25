@@ -1,9 +1,9 @@
-import logo from "@/assets/logo.png";
-import Busca from "../Busca";
-import { navbar, icons, logoImage, busca } from "./styles.module.css";
+import logo from '@/assets/logo.png';
+import Busca from '../Busca';
+import { navbar, icons, logoImage, busca } from './styles.module.css';
 
 function getCategorias() {
-  return ["acessórios", "sapatos", "canecas", "bolsas/mochilas", "contato"];
+  return ['acessórios', 'sapatos', 'canecas', 'bolsas/mochilas', 'contato'];
 }
 
 export function Navbar() {
@@ -14,7 +14,7 @@ export function Navbar() {
         <ul>
           <li>
             <a href="">
-              <img src={logo} alt="logo-image" className={logoImage} />{" "}
+              <img src={logo} alt="logo-image" className={logoImage} />{' '}
             </a>
           </li>
           <li className={busca}>
@@ -33,8 +33,8 @@ export function Navbar() {
           </li>
         </ul>
         <ul>
-          {categorias.map((categoria) => (
-            <li>{categoria}</li>
+          {categorias.map((categoria, index) => (
+            <li key={`${categoria}-${index}`}>{categoria}</li>
           ))}
         </ul>
       </div>

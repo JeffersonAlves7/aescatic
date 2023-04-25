@@ -1,4 +1,4 @@
-import { flex, p, bi } from "./styles.module.css";
+import { flex, p, bi } from './styles.module.css';
 
 export function Sobre() {
   return (
