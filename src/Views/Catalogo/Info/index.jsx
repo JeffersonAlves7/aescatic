@@ -33,11 +33,19 @@ export function Info() {
       <div className={infos}>
         <div className={flex}>
           <div className={imgsR}>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <div>
+              <img src="" alt="" />
+            </div>
+            <div>
+              <img src="" alt="" />
+            </div>
           </div>
-          <img className={centralImg} src="" alt="" />
+          <div className={centralImg}>
+            <img src="" alt="" />
+          </div>
         </div>
         <div>
           <div>

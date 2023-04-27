@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
 import {
   Produto,
   Produtos,
@@ -6,46 +7,30 @@ import {
   ProdutoPrice,
   ProdutoImage,
 } from './styles.module.css';
+import { useEffect, useState } from 'react';
 
-function getByCategory(categoria) {
+async function getByCategory(categoria) {
   console.log(categoria);
-  const produtos = [
-    {
-      name: 'CROPPED VERMELHO',
-      price: 30.0,
-      img: '',
-    },
-    {
-      name: 'CROPPED VERMELHO',
-      price: 30.0,
-      img: '',
-    },
-    {
-      name: 'CROPPED VERMELHO',
-      price: 30.0,
-      img: '',
-    },
-    {
-      name: 'CROPPED VERMELHO',
-      price: 30.0,
-      img: '',
-    },
-    {
-      name: 'CROPPED VERMELHO',
-      price: 30.0,
-      img: '',
-    },
-  ];
+  const response = await axios.get(
+    `http://localhost:3000/api/products/category/${categoria}`
+  );
+  const produtos = response.data;
 
   return produtos.map((produto) => {
-    const price = produto.price;
-    return { ...produto, price: `R$ ${price}` };
+    // const price = produto.price;
+    return { ...produto, price: `R$ ${produto.price}` };
   });
 }
 
 export function Categoria() {
   const { categoria } = useParams();
-  const produtos = getByCategory(categoria);
+  const [produtos, setProdutos] = useState([]);
+
+  useEffect(() => {
+    getByCategory(categoria).then((res) => {
+      setProdutos(res);
+    });
+  }, [categoria]);
 
   return (
     <div id="categoria">
@@ -55,10 +40,12 @@ export function Categoria() {
           {produtos.map((p, i) => (
             <div key={`${p}-${i}`} className={Produto}>
               <Link to={`./${p.name}`} className={ProdutoImage}>
-                <img src={p.img} alt="" />
+                <img src={p.image} alt="" />
               </Link>
-              <p className={ProdutoName}>{p.name}</p>
-              <p className={ProdutoPrice}>{p.price}</p>
+              <div>
+                <p className={ProdutoName}>{p.name}</p>
+                <p className={ProdutoPrice}>{p.price}</p>
+              </div>
             </div>
           ))}
         </div>
