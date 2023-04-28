@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   imgsR,
@@ -5,6 +6,13 @@ import {
   flex,
   btnTamanho,
   infos,
+  btnBuy,
+  price,
+  tamanho,
+  select,
+  icones,
+  infoPrice,
+  color,
 } from './styles.module.css';
 
 function getInfo(categoria, peca) {
@@ -26,6 +34,18 @@ export function Info() {
   const { categoria, peca } = useParams();
 
   const info = getInfo(categoria, peca); // Essa variavel vai ter todas as informacoes sobre o produto
+  const [count, setCount] = useState(0);
+
+  function adicionarItem() {
+    setCount(count + 1);
+  }
+
+  function removerItem() {
+    if (count === 0) {
+      return;
+    }
+    setCount(count - 1);
+  }
 
   return (
     <div>
@@ -49,29 +69,39 @@ export function Info() {
         </div>
         <div>
           <div>
-            <p>{info.price}</p>
-            <span>3x de 10 sem juros</span>
-            <p>Tamanho:</p>
-            <div className={btnTamanho}>
-              {info.sizes.map((size) => {
-                return <button key={'size'}>{size}</button>;
-              })}
+            <div className={price}>
+              <h2 className={infoPrice}>{info.price}</h2>
+              <span>3x de 10 sem juros</span>
             </div>
-            <p>Cor:</p>
-            <select name="" id="">
-              {info.colors.map((color) => (
-                <option key={color} value={color}>
-                  {color}
-                </option>
-              ))}
-            </select>
-            <p>Quantidade:</p>
+            <div className={tamanho}>
+              <p>Tamanho:</p>
+              <div className={btnTamanho}>
+                {info.sizes.map((size) => {
+                  return <button key={'size'}>{size}</button>;
+                })}
+              </div>
+            </div>
+            <div className={color}>
+              <p>Cor:</p>
+              <select name="" className={select}>
+                {info.colors.map((color) => (
+                  <option key={color} value={color}>
+                    {color}
+                  </option>
+                ))}
+              </select>
+            </div>
+
             <div className={flex}>
-              <input type="number" />
-              <i className="bi bi-suit-heart"></i>
-              <i className="bi bi-cart"></i>
+              <button onClick={removerItem}>-</button>
+              <p>{count}</p>
+              <button onClick={adicionarItem}>+</button>
+              <div className={icones}>
+                <i className="bi bi-suit-heart"></i>
+                <i className="bi bi-cart"></i>
+              </div>
             </div>
-            <button>Comprar Agora</button>
+            <button className={btnBuy}>Comprar Agora</button>
           </div>
         </div>
       </div>
