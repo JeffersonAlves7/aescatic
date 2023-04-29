@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import {
   imgsR,
   centralImg,
-  flex,
   btnTamanho,
   infos,
   btnBuy,
@@ -51,7 +50,7 @@ export function Info() {
     <div>
       <h1>Cropped Vermelho</h1>
       <div className={infos}>
-        <div className={flex}>
+        <div className="flex">
           <div className={imgsR}>
             <div>
               <img src="" alt="" />
@@ -92,10 +91,19 @@ export function Info() {
               </select>
             </div>
 
-            <div className={flex}>
-              <button onClick={removerItem}>-</button>
-              <p>{count}</p>
-              <button onClick={adicionarItem}>+</button>
+            <div className="flex">
+              <div
+                style={{
+                  width: '7rem',
+                }}
+                className="d-flex align-items-center justify-content-between gap-2"
+              >
+                <button onClick={removerItem}>-</button>
+                <div className="d-flex h-full align-items-center justify-content-center">
+                  <p className="m-0">{count}</p>
+                </div>
+                <button onClick={adicionarItem}>+</button>
+              </div>
               <div className={icones}>
                 <i className="bi bi-suit-heart"></i>
                 <i className="bi bi-cart"></i>
