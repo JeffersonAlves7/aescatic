@@ -99,9 +99,7 @@ export function Info() {
                 className="d-flex align-items-center justify-content-between gap-2"
               >
                 <button onClick={removerItem}>-</button>
-                <div className="d-flex h-full align-items-center justify-content-center">
-                  <p className="m-0">{count}</p>
-                </div>
+                <p className="m-0">{count}</p>
                 <button onClick={adicionarItem}>+</button>
               </div>
               <div className={icones}>
